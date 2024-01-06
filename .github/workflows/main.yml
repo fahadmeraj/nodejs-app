@@ -21,5 +21,5 @@ jobs:
       - name: build-app
         run: docker build . -t npm-test-app:1
       - name: push-to-repo
-        run: docker push fahadmeraj/npm-test-app:1
+        run: docker push npm-test-app:1
       
