@@ -20,4 +20,6 @@ jobs:
       - uses: actions/checkout@v4
       - name: build-app
         run: docker build .
+      - name: push-to-repo
+        run: docker push 
       
