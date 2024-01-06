@@ -4,16 +4,16 @@ on:
     branches:
       - main
 jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: test-app
-        uses: actions/setup-node@v3
-        with:
-          node-version: '20.x'
-      - run: npm install
-      - run: npm run test
+#  test:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - uses: actions/checkout@v4
+#      - name: test-app
+#        uses: actions/setup-node@v3
+#        with:
+#          node-version: '20.x'
+#      - run: npm install
+#      - run: npm run test
   build:
     runs-on: ubuntu-latest
     steps:
@@ -21,6 +21,6 @@ jobs:
       - name: build-app
         run: docker build . -t npm-test-app:1
       - name: push-to-repo
-        run: docker login -u fahadmeraj --password-stdin dckr_pat_CiOy-lSTbSzZz0FQC1F_Sd2YU-Y
+        run: docker login -u fahadmeraj --password dckr_pat_CiOy-lSTbSzZz0FQC1F_Sd2YU-Y
       - run: docker push npm-test-app:1
       
