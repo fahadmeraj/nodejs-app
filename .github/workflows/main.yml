@@ -5,12 +5,12 @@ on:
       - main
 jobs:
   test:
-    runs-on: node:latest
+    runs-on: ubuntu-latest
     steps:
       - name: test-app
         run: npm install
   build:
-    runs-on: node:latest
+    runs-on: ubuntu-latest
     steps:
       - name: build-app
         run: docker build .
