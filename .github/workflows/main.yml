@@ -19,8 +19,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: build-app
-        run: docker build . -t npm-test-app:1
+        run: docker build . -t fahadmeraj/npm-test-app:1
       - name: push-to-repo
         run: docker login -u fahadmeraj --password dckr_pat_CiOy-lSTbSzZz0FQC1F_Sd2YU-Y
-      - run: docker push npm-test-app:1
+      - run: docker push fahadmeraj/npm-test-app:1
       
