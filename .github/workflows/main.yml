@@ -19,7 +19,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: build-app
-        run: docker build .
+        run: docker build . -t npm-test-app:1
       - name: push-to-repo
-        run: docker push fahadmeraj/node-test-app:latest
+        run: docker push fahadmeraj/npm-test-app:1
       
